@@ -32,7 +32,7 @@ def train(triplet_data_dir, output):
     triplet_reader = TripletReader(triplet_data_dir, s1_col_idx=1, s2_col_idx=2, s3_col_idx=3, delimiter=',',
                                    quoting=csv.QUOTE_MINIMAL, has_header=True)
     # output_path = "output/bert-base-wikipedia-sections-mean-tokens-"+datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    output_path = output
+    output_path = output+datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     num_epochs = 1
 
 
