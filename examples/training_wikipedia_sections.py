@@ -50,7 +50,7 @@ def train(triplet_data_dir, output):
 
 
     logging.info("Read Triplet train dataset")
-    train_data = SentencesDataset(examples=triplet_reader.get_examples('train.csv'), model=model)
+    train_data = SentencesDataset(examples=triplet_reader.get_examples('train.csv', 2000000), model=model)
     train_dataloader = DataLoader(train_data, shuffle=True, batch_size=train_batch_size)
     train_loss = losses.TripletLoss(model=model)
 
